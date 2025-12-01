@@ -14,6 +14,14 @@ This repository documents the evolution of our autonomous robot's pathfinding lo
 - **Goal:** Minimize the number of turns to reduce mechanical delay.
 - **Result:** This solved the zig-zagging issue. The robot took longer physical paths that were straighter. However, it sometimes took massive detours just to avoid a single turn, which ended up taking more time overall.
 
+  ### 3. [v3_STPO_Optimized](./v3_STPO_Optimized) (Final Solution)
+- **Algorithm:** Short-Time Path Optimization (STPO).
+- **Goal:** Shortest **Time** pathing using Dijkstra on 3D States (x, y, direction).
+- **Logic:** Tracks accumulated time, including:
+    - Segment Time: ~1.0s (Time to travel 1 block)
+    - Turn Penalty: ~2.5s (Time to turn 90°)
+- **Result:** Calculates the mathematically fastest route based on exact robot physics.
+
 ## 🛠 Hardware
 - **Controller:** Arduino Mega 2560
 - **Sensors:** QTR-8A Line Array, IR Obstacle Sensors, TCS34725 Color Sensor
