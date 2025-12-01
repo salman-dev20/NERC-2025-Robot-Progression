@@ -14,7 +14,7 @@ This repository documents the evolution of our autonomous robot's pathfinding lo
 - **Goal:** Minimize the number of turns to reduce mechanical delay.
 - **Result:** This solved the zig-zagging issue. The robot took longer physical paths that were straighter. However, it sometimes took massive detours just to avoid a single turn, which ended up taking more time overall.
 
-  ### 3. [v3_STPO_Optimized](./v3_STPO_Optimized) (Final Solution)
+### 3. [v3_STPO_Optimized](./v3_STPO_Optimized) (Final Solution)
 - **Algorithm:** Short-Time Path Optimization (STPO).
 - **Goal:** Shortest **Time** pathing using Dijkstra on 3D States (x, y, direction).
 - **Logic:** Tracks accumulated time, including:
